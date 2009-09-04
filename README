@@ -1,0 +1,27 @@
+This is the README file for roundedge
+
+DESCRIPTION
+roundedge is a little Qt4 eyecandy program that makes the edges of
+your desktop round. It doesn't use composide but works as an overlay
+so that you can still grab the window below.
+For more details call roundedge with option '-help'.
+
+TODO
+At the current version it's not very well tested and lacks of a exit
+function. It means you have to 'kill' it ;)
+
+LICENSE
+GPLv3 or any later
+
+DEPENDENCIES
+Qt4-dev
+
+HOW TO BUILD
+first execute 'qmake' then 'make'
+
+HOW TO INSTALL
+copy the binary 'roundedge' to /usr/local/bin for example.
+
+
+-- Christoph Fritz <chris_honschu(at)gmx.de>
+
