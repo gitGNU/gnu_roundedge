@@ -50,12 +50,7 @@ RoundEdge::RoundEdge(QWidget *parent, Qt::WindowFlags f, Orientation orient)
 
     /* create path rounded corner */
     QPainterPath path;
-    path.moveTo(25.0, 25.0);
-    path.arcTo(0.0, 0.0, 50.0, 50.0, 270.0, 90.0);
-    path.moveTo(25.0, 25.0);
-    path.lineTo(50.0, 25.0);
-    path.lineTo(50.0, 50.0);
-    path.lineTo(25.0, 50.0);
+    path.arcTo(0.0, 0.0, 50.0, 50.0, 90.0, 90.0);
     path.closeSubpath();
 
     /* draw path into bmp */
@@ -68,19 +63,18 @@ RoundEdge::RoundEdge(QWidget *parent, Qt::WindowFlags f, Orientation orient)
     switch (orient)
     {
     case UpLeft:
-        painter.rotate(180);
-        painter.translate(-50.0, -50.0);
-        break;
-    case DownLeft:
-        painter.rotate(90);
-        painter.translate(-25.0, -50.0);
         break;
     case UpRight:
-        painter.rotate(-90);
-        painter.translate(-50.0, -25.0);
+        painter.translate(25.0, 0.0);
+        painter.rotate(90);
         break;
     case DownRight:
-        painter.translate(-25.0, -25.0);
+        painter.translate(25.0, 25.0);
+        painter.rotate(180);
+        break;
+    case DownLeft:
+        painter.translate(0.0, 25.0);
+        painter.rotate(270);
         break;
     }
     painter.drawPath(path);

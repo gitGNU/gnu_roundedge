@@ -14,7 +14,7 @@ LICENSE
 GPLv3 or any later
 
 DEPENDENCIES
-Qt4-dev
+Qt version 4.5.2
 
 HOW TO BUILD
 first execute 'qmake' then 'make'
