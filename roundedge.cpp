@@ -30,7 +30,7 @@ RoundEdge::RoundEdge(QWidget *parent, Qt::WindowFlags f, Orientation orient)
     /* set window position */
     QDesktopWidget* desktopWidget = QApplication::desktop();
     QRect r = desktopWidget->screenGeometry();
-    r.adjust(0, 0, -26, -24);
+    r.adjust(0, 0, -24, -24);
     if (orient == UpLeft)
         move(r.topLeft());
     else if (orient == DownLeft)
